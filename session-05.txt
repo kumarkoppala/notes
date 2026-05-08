@@ -1,0 +1,182 @@
+:q -> quit
+:q! -> quit without saving
+:wq -> write and quit
+:set nu -> number
+:set nonu -> no number
+:/<word-to-search> -> forward search
+:?<word-to-search> -> backward search
+:<line-number> -> cursor moves to line-number
+:2d -> delete 2nd line
+:2,5d -> 2-5 lines delete
+:%d -> all content delete
+:%s/<word-to-search>/<word-to-replace>/g -> entire file all occurences replace
+
+ESC mode
+========
+u -> undo
+ctrl+r -> redo
+yy -> copy
+p -> paste below the line
+shift+p -> above the line paste
+gg -> top of the file
+shift+g -> bottom of the file
+
+User management
+================
+useradd <username>
+passwd <useradd>
+groupadd <grouname>
+usermod -g <grouname> <username>
+usermod -aG <comma-seperate-groupnames> <username>
+/etc/passwd
+/etc/group
+id <username>
+/etc/ssh/sshd_config
+sshd -t
+/etc/sudoers
+/etc/sudoers.d/<username>
+/etc/sudoers.d/<groupname>
+
+/home/<username>/.ssh -> 700
+/home/<username>/.ssh/authorized_keys -> 600 -> paste public key here
+chown -R <username>:<username> .ssh
+
+R -> 4
+W -> 2
+X -> 1
+chmod ugo
+chown <username>:<grouname>
+
+tar command
+=========
+.zip -> compression format
+.tar.gz -> linux format
+
+tar -czvf <file-name>.gz <files/folders>
+c -> creation
+z -> gz format
+v -> verbose, show the output
+f -> file
+
+tar -xzvf <file-name>.gz
+
+find command
+===========
+find <where-to-search> <conditions>
+
+passwd
+
+find / -iname "*.log"
+
+find / -type d -name "devops"
+
+
+useradd ramesh
+
+1. lock the user
+check user already logged in
+kill his process
+remove him from all the groups
+3. take backup of his files including his home directory
+4. remove his home folder
+5. check if he has entry in sudoers file or sudoers.d
+
+pkill -u ramesh
+userdel -r ramesh -> deletes the user and home directory
+
+package management
+=================
+dnf install <package-name>
+dnf remove <package-name>
+dnf update <package-name>
+dnf search <package-name>
+dnf info <package-name>
+dnf list installed | grep nginx
+dnf list available -> not installed in our system, but available in cloud
+dnf repolist -> list repos available in system
+
+apt-get -> debian family
+
+service management
+==================
+sshd -> service, continously running doing some work
+
+systemctl start <service-name>
+nginx -> popular web/http server. 
+
+systemctl stop nginx
+systemctl status nginx
+systemctl restart nginx
+systemctl enable nginx -> if you start the server, it will automatically start
+systemctl disable nginx -> disabling auto start
+
+process management
+=================
+ticket creation -> visual in app
+ticket done -> update
+
+ticket_id
+
+every process is tracked through process-id
+
+lead -> senior -> junior -> fresher
+
+a process can start another process. 
+
+pid -> process instance id -> child
+ppid -> parent process instance id
+
+ps ->list the process of current logged in user
+ps aux -> all process with username and cpu, ram, etc
+ps -ef -> all processes information along with parents
+
+1. background process
+2. foreground process
+
+kill <PID> -> graceful killing
+kill -9 <PID> -> force killing
+
+network management
+==================
+netstat -lntp -> ports opened in our server
+
+systemctl status 
+netstat -lntp
+ps -ef | grep <service-name>
+
+3 tier architecture
+===================
+1 person, he has food items
+	taking order, cooking, taking payments, queue maintainance
+	5-10 members
+
+hotel mode
+==========
+token system -> taking payments
+cooks -> keep the orders in queue, cook and server them
+20 members
+
+restaurant model
+===========
+captain -> welcome us
+he checks which table is free
+table -> waiter
+chef -> only cooking
+
+web tier/frontend tier
+=============
+load balancer
+frontend -> HTML, JS, CSS
+
+backend tier/app tier
+=============
+backend -> java, python, .net, nodejs, go, etc.
+
+database tier
+===========
+database -> user data -> mysql, oracle, postgress, MSSQL, etc.
+
+{
+	"user": "sivakumar",
+	"email": "info@joindevops.com"
+}
