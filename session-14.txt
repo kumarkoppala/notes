@@ -1,0 +1,134 @@
+where to store code?
+====================
+without vcs
+-------------
+1. backup and security
+2. no version control
+3. colloboration
+4. tracking
+5. branching -> another copy of code
+
+git -> distributed version control system
+svn -> sub version control system -> centralised
+
+centralised
+===========
+1. single source of failure
+2. history of changes, branches, everything is in central svn server
+3. can't work offline, can't get old versions if network is down
+
+IDE -> integrated development environment
+
+distributed
+===========
+10 files -> 8 files ready, 2 files in progress
+
+1. every laptop has same copy of central repo
+2. if git crashes, all laptops crashes single laptop is enough to restore
+
+git -> concept
+github/gitlab/bitbucket -> companies based on git, their UI is different, apart from that git commands features are same
+
+github.com/joindevopscloud
+
+git clone https://github.com/daws-90s/shell-practice.git
+
+git add <file-name> -> adds to staging area
+git commit -m "<message>"
+
+main -> always points to production
+
+git push origin main -> send code to remote main branch
+
+shebang
+=======
+
+#!/bin/bash -> this should be the first line in shell, path of the interpreter that checks the syntax of the script
+
+bash script == shell script
+
+add to staging area; commit to local repo; push to central repo
+
+git add . ; git commit -m "hello world script created"; git push origin main
+. -> all files which are changed
+
+90% thinking, 10% coding
+1. dont think syntax
+2. dont think technically
+3. just think generally, write in plain english
+
+1. what is today?
+2. if today is not sunday, go to school
+3. if today is sunday, take holiday and enjoy
+
+psudo code
+==========
+
+today = thursday
+
+if (today != sunday ){
+	print "go to school"
+}
+else{
+	print "take holiday, enjoy"
+}
+
+check a number is even or odd
+
+if a number is divisible by 2, then even
+reminder is 0
+
+10/2 = 0
+
+then even number
+
+psudo code
+========
+number = 11
+reminder = 11%2 # reminder = 1
+
+if (reminder == 0 ){
+	print number is even
+}
+else {
+	print number is odd
+}
+
+1. variables and data types
+2. conditions
+3. functions
+4. loops
+5. error handling
+
+x=1 y=0
+
+derive formula
+
+final substitution
+
+VAR_NAME=VALUE -> no space around =
+
+DRY -> Don't repeat yourself
+1. you change in single place, it reflects everywhere
+2. We are preventing accidental edits in other places
+
+you can pass values to variables through command line args
+
+sh 03-variables.sh Trump Iran
+
+$1=Trump
+$2=Iran
+
+script started executing at: timestamp_start
+
+script completed at: timestamp_end
+
+time took = timestamp_end-timestamp_start
+
+tomorrow's topics
+================
+special variables
+data types
+conditions
+functions
+loops
