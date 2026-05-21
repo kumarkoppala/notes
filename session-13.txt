@@ -1,0 +1,58 @@
+Python
+=======
+.py
+build tool -> pip
+build file -> requirements.txt
+
+memory management commands
+==========================
+ram usage -> free -h
+swap -> virtual ram, Linux move inactive apps to swap memory to keep ram free
+ps -aux --sort=-%mem | head
+
+df -hT -> disk file system information
+du -sh * -> show us disk utilisation
+
+inode symlink and hardlink
+=========================
+inode -> stores metadata about the file
+file type -> file/directory
+owner group
+size
+permission
+create, update
+memory blocks
+
+symlink
+========
+Chrome -> ProgramFiles/google-chrome
+Desktop > Google Chrome -> ProgramFiles/google-chrome
+
+1. inode of symlink and actual file is different
+2. if we delete actual file, symlink will break
+3. uses for backward compatability, version switching and then rollback
+4. you can create symlink directories also
+
+hardlink
+========
+1. same inode for hardlink
+2. even we delete the file, other link files still exist, we can access
+3. used for backups
+4. actual content will not be deleted until all the links are deleted
+5. hard link not allowed for directory
+
+Disk management
+===============
+Hard disk and network disk
+
+Hard disk -> should be adjacent to system -> only 1 system at a time -> OS and Databases
+network disk -> anywhere in internet -> you can access in many systems
+
+lsblk
+
+sudo parted /dev/nvme1n1 --script mklabel gpt mkpart primary 0% 100%
+
+
+db72eecd-6bdb-45f1-86a2-366732e2d587
+
+UUID=db72eecd-6bdb-45f1-86a2-366732e2d587   /data   xfs   defaults,nofail   0   2

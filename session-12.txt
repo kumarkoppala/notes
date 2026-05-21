@@ -1,0 +1,41 @@
+MongoDB
+========
+
+
+Java
+=====
+file extension .java
+build tool -> Ant, Gradle, Maven, etc
+
+JDK and JRE
+
+Source code -> Compile -> Byte code -> Execute -> Machine code(0,1)
+
+JDK(Java development kit)
+JRE(Java Runtime environment)
+
+JDK > JRE
+JDK = JRE + development related tools
+
+Maven -> Build tool
+pom.xml -> Build file
+
+maven format
+============
+group-id -> com.amazon (project)
+artifact-id -> catalogue
+version -> v1, v2, v3
+
+com.amazon.catalouge-v1
+
+first name, last name, dob, aadhar card
+
+npm install -> install packages (npm public repos)
+mvn package (compile + unit-tests + package ) -> .jar (java archieve file)[compiled and packaged code]
+
+java -jar shipping.jar
+
+nodejs -> npm
+maven -> java
+
+mvn clean package -> remove previous builds
