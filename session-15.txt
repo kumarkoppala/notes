@@ -1,0 +1,145 @@
+#!/bin/bash
+VAR_NAME=VALUE
+sh <script-name.sh> first-arg second-arg .....
+
+$1=first-arg
+$2=second-arg
+.
+.
+.
+
+read VAR_NAME
+VAR_NAME=$(command)
+
+shell automatically created few variables and assigned values, useful for us while writing scripts
+
+$@ -> all variables passed to the script
+
+echo "All variables passed to script: $@"
+echo "Number of variables passed: $#"
+echo "First variable: $1"
+echo "Script name: $0"
+echo "Who is running this: $USER"
+echo "Which directory: $PWD"
+echo "Home directory: $HOME"
+echo "PID of the current script: $$"
+sleep 5 &
+echo "PID of the background command running just now: $!"
+wait $!
+echo "Line number: $LINENO"
+echo "Script executed in $SECONDS seconds"
+echo "Random number: $RANDOM"
+
+Exit code
+=========
+$? -> previous command success or not
+0 - success
+1-127 -> failure
+
+variables
+data types
+
+shell by default treats variable as string
+
+int, float, long, decimal, boolean, string, char, double, array, arraylist, map, set, etc
+
+int i = devops
+
+string name = siva123
+
+ariane4 -> integer 9km/sec
+ariane5 -> float  8.2km/sec
+
+integer speed = 8.2
+float speed
+
+conditions
+==========
+
+if (expression) {
+
+	execute these lines if expression is true
+}
+
+
+
+if (expression) {
+
+	execute these lines if expression is true
+}
+else {
+	execute these lines if expression is false
+}
+
+if (expression) {
+
+	execute these lines if expression is true
+}
+else if (expression) {
+
+	execute these lines if expression is true
+}
+else if (expression) {
+
+	execute these lines if expression is true
+}
+else {
+	execute these lines if expression is false
+}
+
+10
+
+number = 20
+
+if (number > 10){
+	print number 20 is greater than 10
+}
+else{
+	print number 20 is less than 10
+}
+
+if [ $NUMBER -gt 20 ]; then
+	echo "number is greater than 20"
+else
+	echo "number is less than 20"
+fi
+
+install mysql command through shell script
+1. user should have root access or run script with root access
+2. if root allow, otherwise exit the script with proper reason
+3. install the command
+4. check exit status, if 0 show success
+5. if not 0 show failure
+
+it is our responsibility to check everytime whether the previous command is succes or not
+
+add another thing, check if package is already installed or not, if installed show already installed, otherwise install
+
+functions
+=========
+keep the repeated code in a function, call that function when required. pass the inputs required for that function
+
+1. less lines of code
+2. less time
+3. less resources
+
+FUNC_NAME(){
+	$1 $2
+	keep the code here
+}
+
+FUNC_NAME arg-1 arg-2
+
+redirections
+============
+< -> inputs
+> -> output
+>> -> append to output
+
+1 -> success
+2 ->  failure
+& -> succes/failure
+
+ls -l 1> output.log
+
+
