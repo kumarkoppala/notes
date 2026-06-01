@@ -1,0 +1,55 @@
+Shell -> Mongodb
+Mongodb should allow port no 22 from shell
+
+when we create server we get plain server, if we make server ready to host the application that is called configuring server, managing this configuration is called configuration management
+
+create, read, update and delete the configuration everything should be from the script
+
+push vs pull
+=============
+HYD -> Delhi
+
+1. you go everyday to DTDC office and check you got the gift or not -> pull or polling
+2. you stay home, when you get order, they deliver -> push
+
+1. unnecessary traffic
+2. unnecessary resources
+
+everything is commnad in linux
+everything is module/collection in ansible
+
+ansible all -i 172.31.27.248, -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
+
+if we keep all the modules of ansible we are using against server in a file, that is called playbook
+
+YAML -> Yet Another Markup Language
+
+XML, HTML
+
+<h1>Hi</h1>
+
+facebook signup -> firstname, lastname, dob, email, mobilenumber
+
+DTO -> XML or JSON
+
+name, acc no, money, date, sign, branch, etc...
+forms/templates
+
+key -> value
+branch -> hyd
+date -> 01st jun 2026
+name -> sivakumar
+
+[ -> list
+{ -> map
+
+students[0].firstName
+
+addresses[0].type
+
+ansible inventory = servers ansible wants to target
+
+echo "Hello World"
+dnf install nginx
+dnf install
+dnf nginx
