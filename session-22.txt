@@ -1,0 +1,21 @@
+ansible server -> ansible node
+so node should allow port 22 from ansible server
+
+user_data in ec2
+sudo tail -f /var/log/cloud-init-output.log
+
+integer, float, long, decimal -> number
+string
+boolean
+map/dictionary/object
+
+- [ -> list
+{ -> map/dictionary/object
+
+today's topics
+==============
+variables
+data types
+conditions
+ansible_facts
+loops
