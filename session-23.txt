@@ -1,5 +1,33 @@
 functions or filters -> we can't create custom functions, we have to use ansible predefined functions
 
+- name: demo on filters
+  hosts: localhost
+  vars:
+    topics: linux, shell, ansible, terraform
+    tagMap:
+      name: "kumar"
+      city: "AP"
+      dob: "489894"
+    name: Yokshith
+    ip_addrs: 1000.303.50504:30
+  tasks:
+   - name: convert string to list
+     debug:
+        msg: "topics are: {{ topics | split(',') }}"  # here we used split() to convert strings into list data
+   - name: print message
+     debug:
+        msg: "greeting: {{ greetings | default('Good Morning!') }}" # as we not passed greeting variable it'll fail, to avoid this we're using default() it'll                                                                           give default value when we not pass any value
+    - name: convert map to list
+      debug:
+        msg: "{{ tagMap | dict2items }}"
+    - name: convert to upper case
+      debug:
+        msg: "{{ name | UPPER }}"
+     - name: Ip Address Valid or not
+        msg: "{{ ip_addrs | ansible.utils.ipaddr }}"
+       
+
+  
 linux commands
 
 ansible allow us to run linux commands if there is no module available
