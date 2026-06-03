@@ -1,0 +1,24 @@
+functions or filters -> we can't create custom functions, we have to use ansible predefined functions
+
+linux commands
+
+ansible allow us to run linux commands if there is no module available
+1. shell module -> we get complete shell env like variables, pipes(|), redirections(<<, >>), etc
+2. command module -> we dont get anything, just command will be executed
+
+VAR=$(command)
+
+register keyword -> takes the ansible output into a variable
+
+if we use ansible modules, idempotency is gaurenteed, otherwise we need to handle manually
+
+1. create or destroy
+2. if create create the instances, and create r53 records
+3. if destroy delete the r53 records and delete instances
+
+todays topics
+==============
+filters -> data manipulation 
+error handling -> ignore_errors: true
+register
+shell vs command
